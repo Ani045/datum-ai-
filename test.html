@@ -3,664 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Choose Us Section</title>
+    <title>Footer Example</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary-orange: #e76b2d;
-            --secondary-blue: #0d3e87;
-            --light-gray: #f0f0f0;
-            --primary-blue: #0d47a1;
+        .footer {
+            background-color: #f8f9fa;
+            padding: 30px 0;
+            border-top: 1px solid #e9ecef;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        
+        .footer-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        /* Main Section */
-        .why-choose-radial-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
-            position: relative;
-            overflow: hidden;
-            min-height: 100vh;
+        
+        .footer-logo {
+            height: 40px;
+            width: auto;
         }
-
-        /* Background Animation */
-        .why-choose-bg-animation {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+        
+        .footer-contact p {
+            margin-bottom: 5px;
+            font-size: 14px;
         }
-
-        .why-choose-pulse-circle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 600px;
-            height: 600px;
-            border: 2px solid rgba(231, 107, 45, 0.1);
-            border-radius: 50%;
-            animation: pulse-expand 4s ease-in-out infinite;
+        
+        .footer-contact a {
+            color: #6c757d;
+            text-decoration: none;
         }
-
-        .why-choose-pulse-circle:nth-child(2) {
-            animation-delay: 1s;
-            width: 700px;
-            height: 700px;
+        
+        .footer-contact a:hover {
+            color: #0d6efd;
         }
-
-        .why-choose-pulse-circle:nth-child(3) {
-            animation-delay: 2s;
-            width: 800px;
-            height: 800px;
-        }
-
-        @keyframes pulse-expand {
-            0% {
-                transform: translate(-50%, -50%) scale(0.9);
-                opacity: 0.8;
-            }
-            50% {
-                transform: translate(-50%, -50%) scale(1.05);
-                opacity: 0.3;
-            }
-            100% {
-                transform: translate(-50%, -50%) scale(0.9);
-                opacity: 0.8;
-            }
-        }
-
-        /* Header */
-        .why-choose-radial-header {
-            text-align: center;
-            margin-bottom: 100px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .why-choose-radial-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--secondary-blue);
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .why-choose-radial-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: var(--primary-orange);
-            border-radius: 2px;
-        }
-
-        .why-choose-radial-subtitle {
-            font-size: 1.3rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Radial Layout Container */
-        .why-choose-radial-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-            height: 700px;
-        }
-
-        /* Center Logo/Icon */
-        .why-choose-center-hub {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 200px;
-            height: 200px;
-            background: white;
-            border-radius: 50%;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        
+        .copyright {
             display: flex;
             align-items: center;
-            justify-content: center;
-            z-index: 20;
-            border: 5px solid var(--primary-orange);
+            color: #6c757d;
+            font-size: 14px;
         }
-
-        .why-choose-center-content {
-            text-align: center;
+        
+        .copyright i {
+            margin-right: 5px;
         }
-
-        .why-choose-center-icon {
-            font-size: 3rem;
-            color: var(--primary-orange);
-            margin-bottom: 10px;
-        }
-
-        .why-choose-center-text {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--secondary-blue);
-        }
-
-        /* Radial Items */
-        .why-choose-radial-item {
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            transform: translate(-50%, -50%);
-            transition: all 0.3s ease;
-        }
-
-        .why-choose-item-card {
-            width: 100%;
-            height: 100%;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
+        
+        .terms-links {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            gap: 15px;
         }
-
-        .why-choose-item-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--primary-orange), var(--secondary-blue));
-            border-radius: 20px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        
+        .terms-link {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 14px;
         }
-
-        .why-choose-item-card:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 40px rgba(231, 107, 45, 0.2);
+        
+        .terms-link:hover {
+            color: #0d6efd;
         }
-
-        .why-choose-item-card:hover::before {
-            opacity: 0.1;
-        }
-
-        .why-choose-item-icon {
-            font-size: 2.5rem;
-            color: var(--primary-orange);
-            margin-bottom: 10px;
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 2;
-        }
-
-        .why-choose-item-card:hover .why-choose-item-icon {
-            transform: rotateY(360deg);
-            color: var(--secondary-blue);
-        }
-
-        .why-choose-item-title {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--secondary-blue);
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Positioning items in a circle */
-        .why-choose-radial-item:nth-child(1) { top: 15%; left: 50%; }
-        .why-choose-radial-item:nth-child(2) { top: 25%; left: 75%; }
-        .why-choose-radial-item:nth-child(3) { top: 50%; left: 85%; }
-        .why-choose-radial-item:nth-child(4) { top: 75%; left: 75%; }
-        .why-choose-radial-item:nth-child(5) { top: 85%; left: 50%; }
-        .why-choose-radial-item:nth-child(6) { top: 75%; left: 25%; }
-        .why-choose-radial-item:nth-child(7) { top: 50%; left: 15%; }
-        .why-choose-radial-item:nth-child(8) { top: 25%; left: 25%; }
-
-        /* Connecting Lines */
-        .why-choose-connection-line {
-            position: absolute;
-            background: linear-gradient(90deg, var(--primary-orange), var(--secondary-blue));
-            height: 2px;
-            transform-origin: center;
-            opacity: 0.3;
-            transition: all 0.3s ease;
-        }
-
-        /* Detail Panel */
-        .why-choose-detail-panel {
-            position: fixed;
-            top: 50%;
-            right: -400px;
-            transform: translateY(-50%);
-            width: 350px;
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            transition: right 0.3s ease;
-            z-index: 1000;
-        }
-
-        .why-choose-detail-panel.active {
-            right: 30px;
-        }
-
-        .why-choose-detail-close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: #999;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .why-choose-detail-close:hover {
-            color: var(--primary-orange);
-            transform: rotate(90deg);
-        }
-
-        .why-choose-detail-icon {
-            font-size: 3rem;
-            color: var(--primary-orange);
-            margin-bottom: 20px;
-        }
-
-        .why-choose-detail-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--secondary-blue);
-            margin-bottom: 15px;
-        }
-
-        .why-choose-detail-description {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .why-choose-detail-features {
-            list-style: none;
-            padding: 0;
-        }
-
-        .why-choose-detail-features li {
-            padding: 10px 0;
-            color: #555;
-            position: relative;
-            padding-left: 25px;
-        }
-
-        .why-choose-detail-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--primary-orange);
-            font-weight: bold;
-        }
-
-        /* Mobile Menu */
-        .why-choose-mobile-toggle {
-            display: none;
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background: var(--primary-orange);
-            border-radius: 50%;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            z-index: 100;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .why-choose-radial-container {
-                height: auto;
-                padding: 20px;
-            }
-
-            .why-choose-radial-item {
-                position: relative;
-                width: 100%;
-                height: auto;
-                top: auto !important;
-                left: auto !important;
-                transform: none;
+        
+        @media (max-width: 992px) {
+            .footer-bottom > div {
+                width: 50%;
                 margin-bottom: 20px;
             }
-
-            .why-choose-item-card {
-                flex-direction: row;
-                height: auto;
-                padding: 20px;
+            
+            .footer-bottom {
                 justify-content: flex-start;
-                text-align: left;
             }
-
-            .why-choose-item-icon {
-                margin-right: 20px;
-                margin-bottom: 0;
+        }
+        
+        @media (max-width: 576px) {
+            .footer-bottom > div {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
             }
-
-            .why-choose-center-hub {
-                position: relative;
-                transform: none;
-                margin: 0 auto 40px;
+            
+            .terms-links {
+                justify-content: center;
             }
-
-            .why-choose-connection-line {
-                display: none;
-            }
-
-            .why-choose-mobile-toggle {
-                display: block;
-            }
-
-            .why-choose-detail-panel {
-                width: 90%;
-                right: -100%;
-            }
-
-            .why-choose-detail-panel.active {
-                right: 5%;
+            
+            .footer-left {
+                display: flex;
+                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
-    <section class="why-choose-radial-section">
-        <div class="why-choose-bg-animation">
-            <div class="why-choose-pulse-circle"></div>
-            <div class="why-choose-pulse-circle"></div>
-            <div class="why-choose-pulse-circle"></div>
-        </div>
-
+    <!-- Your page content here -->
+    
+    <footer class="footer">
         <div class="container">
-            <div class="why-choose-radial-header">
-                <h2 class="why-choose-radial-title">Why Choose Us</h2>
-                <p class="why-choose-radial-subtitle">
-                    Discover our commitment to excellence through eight core pillars of exceptional healthcare delivery
-                </p>
-            </div>
-
-            <div class="why-choose-radial-container">
-                <!-- Center Hub -->
-                <div class="why-choose-center-hub">
-                    <div class="why-choose-center-content">
-                        <i class="bi bi-hospital why-choose-center-icon"></i>
-                        <div class="why-choose-center-text">Excellence<br>in Care</div>
+            <div class="footer-bottom">
+                <div class="footer-left">
+                    <img src="assets/67528c2628e06a7d4c10876c_Datum New Logo (1).svg" alt="Datum AI Logo" class="footer-logo">
+                </div>
+                
+                <div class="footer-contact">
+                    <p>US: +1 417-739-0215</p>
+                    <p>India: +91-96507-27903</p>
+                    <p>Email: <a href="mailto:contact@datum-ai.com">contact@datum-ai.com</a></p>
+                </div>
+                
+                <div class="footer-center">
+                    <div class="copyright">
+                        <i class="far fa-copyright"></i>
+                        <span>2025 All Rights Reserved</span>
                     </div>
                 </div>
-
-                <!-- Radial Items -->
-                <div class="why-choose-radial-item">
-                    <div class="why-choose-item-card" data-item="1">
-                        <i class="bi bi-person-badge-fill why-choose-item-icon"></i>
-                        <h3 class="why-choose-item-title">Experienced<br>Doctors</h3>
+                
+                <div class="footer-right social-terms">
+                    <div class="terms-links">
+                        <a href="#" class="terms-link">Terms of Service</a>
+                        <a href="#" class="terms-link">Privacy Policy</a>
                     </div>
                 </div>
-
-                <div class="why-choose-radial-item">
-                    <div class="why-choose-item-card" data-item="2">
-                        <i class="bi bi-hospital-fill why-choose-item-icon"></i>
-                        <h3 class="why-choose-item-title">Wide Range<br>of Services</h3>
-                    </div>
-                </div>
-
-                <div class="why-choose-radial-item">
-                    <div class="why-choose-item-card" data-item="3">
-                        <i class="bi bi-cpu-fill why-choose-item-icon"></i>
-                        <h3 class="why-choose-item-title">Advanced<br>Technology</h3>
-                    </div>
-                </div>
-
-                <div class="why-choose-radial-item">
-                    <div class="why-choose-item-card" data-item="4">
-                        <i class="bi bi-heart-fill why-choose-item-icon"></i>
-                        <h3 class="why-choose-item-title">Personalized<br>Care</h3>
-                    </div>
-                </div>
-
-                <div class="why-choose-radial-item">
-                    <div class="why-choose-item-card" data-item="5">
-                        <i class="bi bi-currency-rupee why-choose-item-icon"></i>
-                        <h3 class="why-choose-item-title">Affordable<br>Treatments</h3>
-                    </div>
-                </div>
-
-                <div class="why-choose-radial-item">
-                    <div class="why-choose-item-card" data-item="6">
-                        <i class="bi bi-house-heart-fill why-choose-item-icon"></i>
-                        <h3 class="why-choose-item-title">Caring<br>Environment</h3>
-                    </div>
-                </div>
-
-                <div class="why-choose-radial-item">
-                    <div class="why-choose-item-card" data-item="7">
-                        <i class="bi bi-award-fill why-choose-item-icon"></i>
-                        <h3 class="why-choose-item-title">High-Quality<br>Care</h3>
-                    </div>
-                </div>
-
-                <div class="why-choose-radial-item">
-                    <div class="why-choose-item-card" data-item="8">
-                        <i class="bi bi-clipboard2-pulse-fill why-choose-item-icon"></i>
-                        <h3 class="why-choose-item-title">Accurate<br>Diagnoses</h3>
-                    </div>
-                </div>
-
-                <!-- Connection Lines -->
-                <svg class="why-choose-connections" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; pointer-events: none;">
-                    <defs>
-                        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:var(--primary-orange);stop-opacity:0.3" />
-                            <stop offset="100%" style="stop-color:var(--secondary-blue);stop-opacity:0.3" />
-                        </linearGradient>
-                    </defs>
-                </svg>
             </div>
         </div>
+    </footer>
 
-        <!-- Detail Panel -->
-        <div class="why-choose-detail-panel" id="detailPanel">
-            <button class="why-choose-detail-close" onclick="closeDetail()">×</button>
-            <i class="why-choose-detail-icon" id="detailIcon"></i>
-            <h3 class="why-choose-detail-title" id="detailTitle"></h3>
-            <p class="why-choose-detail-description" id="detailDescription"></p>
-            <ul class="why-choose-detail-features" id="detailFeatures"></ul>
-        </div>
-
-        <!-- Mobile Toggle -->
-        <button class="why-choose-mobile-toggle">
-            <i class="bi bi-list"></i>
-        </button>
-    </section>
-
-    <script>
-        // Data for each item
-        const itemData = {
-            1: {
-                icon: 'bi-person-badge-fill',
-                title: 'Experienced Doctors',
-                description: 'Our team consists of board-certified physicians with decades of combined experience in their respective specialties.',
-                features: [
-                    'Board-certified specialists',
-                    'Continuous medical education',
-                    'International training and expertise',
-                    'Patient-focused approach'
-                ]
-            },
-            2: {
-                icon: 'bi-hospital-fill',
-                title: 'Wide Range of Services',
-                description: 'From preventive care to complex surgeries, we offer comprehensive medical services under one roof.',
-                features: [
-                    'Emergency and trauma care',
-                    'Surgical specialties',
-                    'Diagnostic services',
-                    'Rehabilitation programs'
-                ]
-            },
-            3: {
-                icon: 'bi-cpu-fill',
-                title: 'Advanced Technology',
-                description: 'We invest in cutting-edge medical equipment to ensure accurate diagnoses and effective treatments.',
-                features: [
-                    'State-of-the-art imaging',
-                    'Robotic surgery systems',
-                    'Digital health records',
-                    'AI-assisted diagnostics'
-                ]
-            },
-            4: {
-                icon: 'bi-heart-fill',
-                title: 'Personalized Care',
-                description: 'Every patient receives individualized attention and treatment plans tailored to their unique needs.',
-                features: [
-                    'Customized treatment plans',
-                    'One-on-one consultations',
-                    'Holistic health approach',
-                    'Family-centered care'
-                ]
-            },
-            5: {
-                icon: 'bi-currency-rupee',
-                title: 'Affordable Treatments',
-                description: 'Quality healthcare should be accessible. We offer competitive pricing and flexible payment options.',
-                features: [
-                    'Transparent pricing',
-                    'Insurance partnerships',
-                    'Payment plans available',
-                    'No hidden costs'
-                ]
-            },
-            6: {
-                icon: 'bi-house-heart-fill',
-                title: 'Caring Environment',
-                description: 'Our facility is designed to promote healing with a warm, welcoming atmosphere.',
-                features: [
-                    'Comfortable patient rooms',
-                    'Family-friendly spaces',
-                    'Healing gardens',
-                    'Compassionate staff'
-                ]
-            },
-            7: {
-                icon: 'bi-award-fill',
-                title: 'High-Quality Care',
-                description: 'We maintain the highest standards of medical care with regular quality assessments and improvements.',
-                features: [
-                    'JCI accreditation',
-                    'Quality control measures',
-                    'Patient safety protocols',
-                    'Outcome monitoring'
-                ]
-            },
-            8: {
-                icon: 'bi-clipboard2-pulse-fill',
-                title: 'Accurate Diagnoses',
-                description: 'Our advanced diagnostic capabilities ensure precise identification of health conditions.',
-                features: [
-                    'Advanced imaging technology',
-                    'Comprehensive lab services',
-                    'Expert radiologists',
-                    'Quick turnaround times'
-                ]
-            }
-        };
-
-        // Draw connection lines
-        function drawConnections() {
-            const svg = document.querySelector('.why-choose-connections');
-            const center = document.querySelector('.why-choose-center-hub');
-            const items = document.querySelectorAll('.why-choose-radial-item');
-            
-            if (window.innerWidth <= 768) return;
-            
-            const centerRect = center.getBoundingClientRect();
-            const containerRect = center.parentElement.getBoundingClientRect();
-            
-            const centerX = centerRect.left - containerRect.left + centerRect.width / 2;
-            const centerY = centerRect.top - containerRect.top + centerRect.height / 2;
-            
-            items.forEach((item, index) => {
-                const itemRect = item.getBoundingClientRect();
-                const itemX = itemRect.left - containerRect.left + itemRect.width / 2;
-                const itemY = itemRect.top - containerRect.top + itemRect.height / 2;
-                
-                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                line.setAttribute('x1', centerX);
-                line.setAttribute('y1', centerY);
-                line.setAttribute('x2', itemX);
-                line.setAttribute('y2', itemY);
-                line.setAttribute('stroke', 'url(#lineGradient)');
-                line.setAttribute('stroke-width', '2');
-                line.setAttribute('stroke-dasharray', '5,5');
-                line.setAttribute('opacity', '0.5');
-                
-                svg.appendChild(line);
-            });
-        }
-
-        // Handle item clicks
-        document.querySelectorAll('.why-choose-item-card').forEach(card => {
-            card.addEventListener('click', function() {
-                const itemId = this.getAttribute('data-item');
-                const data = itemData[itemId];
-                
-                document.getElementById('detailIcon').className = `why-choose-detail-icon bi ${data.icon}`;
-                document.getElementById('detailTitle').textContent = data.title;
-                document.getElementById('detailDescription').textContent = data.description;
-                
-                const featuresList = document.getElementById('detailFeatures');
-                featuresList.innerHTML = '';
-                data.features.forEach(feature => {
-                    const li = document.createElement('li');
-                    li.textContent = feature;
-                    featuresList.appendChild(li);
-                });
-                
-                document.getElementById('detailPanel').classList.add('active');
-            });
-        });
-
-        // Close detail panel
-        function closeDetail() {
-            document.getElementById('detailPanel').classList.remove('active');
-        }
-
-        // Initialize
-        window.addEventListener('load', drawConnections);
-        window.addEventListener('resize', () => {
-            document.querySelector('.why-choose-connections').innerHTML = '';
-            drawConnections();
-        });
-    </script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

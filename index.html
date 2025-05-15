@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datum AI - Data Annotation Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
         
@@ -20,16 +22,15 @@
         }
         
         * {
-            margin: 0;
-            padding: 0;
+            
             box-sizing: border-box;
             font-family: Barlow , sans-serif;
         }
         
         body {
             background: linear-gradient(135deg, var(--light-gray1) 0%, #f0f0f5 100%);
-            overflow-x: hidden;
-            position: relative;
+            /* overflow-x: hidden;
+            position: relative; */
         }
         
         /* Navbar styles */
@@ -702,13 +703,7 @@
             overflow: hidden;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            position: relative;
-            z-index: 2;
-        }
+      
 
         .container-unique {
             max-width: 1200px;
@@ -1036,13 +1031,7 @@
             overflow: hidden;
         }
         
-        .container {
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 0 30px;
-            position: relative;
-            z-index: 10;
-        }
+       
         
         /* Background elements */
         .bg-elements {
@@ -1596,233 +1585,7 @@
         }
         
         /* Industries section */
-        .datum-industries-section {
-            position: relative;
-        }
         
-        .datum-industries-header {
-            text-align: center;
-            margin-bottom: 60px;
-            position: relative;
-        }
-        
-        .datum-industries-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: linear-gradient(to right, var(--white), #aeaeff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 20px;
-        }
-        
-        .datum-industries-description {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.2rem;
-            color: var(--gray);
-            line-height: 1.8;
-        }
-        
-        .datum-industries-carousel {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        
-        .datum-industry-card {
-            width: calc(20% - 24px);
-            min-width: 220px;
-            height: 320px;
-            /* background: rgba(15, 18, 36, 0.6); */
-            /* backdrop-filter: blur(10px); */
-            border: 1px solid rgba(88, 86, 214, 0.2);
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-            transition: all 0.5s ease;
-        }
-        
-        .datum-industry-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(88, 86, 214, 0.6);
-            box-shadow: 0 20px 40px rgba(88, 86, 214, 0.15);
-        }
-        
-        .datum-industry-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* background: linear-gradient(to bottom, transparent 50%, rgba(15, 18, 36, 0.9)); */
-            z-index: 1;
-        }
-        
-        .datum-industry-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-            opacity: 0.6;
-            transition: all 0.5s ease;
-        }
-        
-        .datum-industry-card:hover .datum-industry-image {
-            opacity: 0.8;
-            transform: scale(1.05);
-        }
-        
-        .datum-industry-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 30px;
-            z-index: 2;
-        }
-        
-        .datum-industry-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 15px;
-            background: rgba(88, 86, 214, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-        }
-        
-        .datum-industry-icon i {
-            font-size: 20px;
-            color: var(--white);
-        }
-        
-        .datum-industry-name {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 10px;
-        }
-        
-        .datum-industry-description {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.6;
-        }
-        
-        /* Responsive styles */
-        @media (max-width: 1440px) {
-            .datum-section-title {
-                font-size: 3.5rem;
-            }
-            
-            .datum-service-title {
-                font-size: 2rem;
-            }
-            
-            .datum-industry-card {
-                width: calc(25% - 22.5px);
-            }
-        }
-        
-        @media (max-width: 1200px) {
-            .datum-service-row {
-                flex-direction: column !important;
-                gap: 40px;
-            }
-            
-            .datum-service-content {
-                padding: 40px 20px;
-            }
-            
-            .datum-service-card {
-                max-width: 100%;
-                padding: 40px;
-            }
-            
-            .datum-service-image {
-                min-height: 400px;
-            }
-            
-            .datum-highlights-section {
-                flex-direction: column;
-            }
-            
-            .datum-industry-card {
-                width: calc(33.333% - 20px);
-            }
-        }
-        
-        @media (max-width: 992px) {
-            .datum-section-title {
-                font-size: 3rem;
-            }
-            
-            .datum-industries-title {
-                font-size: 2.2rem;
-            }
-            
-            .datum-difference-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .datum-industry-card {
-                width: calc(50% - 15px);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .datum-section-title {
-                font-size: 2.5rem;
-            }
-            
-            .datum-industry-card {
-                width: 100%;
-                height: 280px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .datum-section-title {
-                font-size: 2.2rem;
-            }
-            
-            .datum-service-card {
-                padding: 30px;
-            }
-            
-            .datum-highlight-card {
-                padding: 30px;
-            }
-        }
-        .feature-tag {
-            padding: 8px 16px;
-            background: rgba(88, 86, 214, 0.08);
-            border-radius: 30px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--white);
-            display: inline-flex;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-        
-        .feature-tag:hover {
-            background: rgba(88, 86, 214, 0.2);
-            transform: translateY(-2px);
-        }
-        
-        .feature-tag i {
-            font-size: 12px;
-            margin-right: 8px;
-            color: var(--purple);
-        }
         
         /* Why Data Quality Matters and Datum AI Difference */
         .highlights-section {
@@ -2141,13 +1904,6 @@
 
         /* section */
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
-            position: relative;
-            z-index: 1;
-        }
 
         /* Section header */
         .section-header {
@@ -2663,23 +2419,7 @@
             }
         }
 
-        /* faq section css */
-
-
-        /* body {
-            background-color: var(--dark-bg);
-            color: var(--white);
-            line-height: 1.6;
-        }
-
-        /* Container */
-        /* .faq-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
-            position: relative;
-            z-index: 1;
-        } */
+      
 
 
     .datumai-faq-section .container {
@@ -2897,14 +2637,7 @@
     
 
 
-    /* ==contact */
-
-    /* body {
-      background-color: var(--datum-dark-bg);
-      color: var(--datum-white);
-      line-height: 1.6;
-    } */
-
+    
     .datum-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -3171,229 +2904,655 @@ border: 2px solid rgb(218, 218, 218) !important;
       }
     }
 
-        /* Footer styles - REMOVED TOP SPACING */
-        .footer {
-            background-color: white;
-            position: relative;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.03);
+       
+ 
+        .infographic-services-section {
+            background: linear-gradient(135deg, #f3f4f6 0%, #ffffff 100%);
+            /* padding: 80px 0; */
+            overflow: hidden;
         }
-        
-        /* Gradient border at top */
-        .footer::before {
+
+        .infographic-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .infographic-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: #1a202c;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .infographic-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .infographic-subtitle {
+            font-size: 18px;
+            color: #4a5568;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .infographic-service-wrapper {
+            position: relative;
+            margin-bottom: 100px;
+        }
+
+        .infographic-service-row {
+            align-items: center;
+            position: relative;
+        }
+
+        .infographic-service-content {
+            position: relative;
+            z-index: 2;
+            padding: 40px;
+        }
+
+        .infographic-service-number {
+            font-size: 140px;
+            font-weight: 900;
+            color: rgba(102, 126, 234, 0.1);
+            position: absolute;
+            top: -40px;
+            left: 20px;
+            line-height: 1;
+            z-index: 0;
+        }
+
+        .infographic-service-card {
+            position: relative;
+            z-index: 1;
+        }
+
+        .infographic-service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .infographic-service-wrapper:hover .infographic-service-icon {
+            transform: translateY(-5px);
+        }
+
+        .infographic-service-name {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .infographic-service-tagline {
+            font-size: 18px;
+            font-style: italic;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .infographic-service-desc {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 30px;
+        }
+
+        .infographic-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .infographic-feature-pill {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .infographic-feature-pill:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .infographic-feature-pill i {
+            margin-right: 8px;
+        }
+
+        .infographic-service-image {
+            position: relative;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .infographic-service-wrapper:hover .infographic-service-image {
+            transform: translateY(-10px);
+        }
+
+        .infographic-service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .infographic-service-wrapper:hover .infographic-service-image img {
+            transform: scale(1.05);
+        }
+
+        .infographic-service-image::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6, #d946ef);
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
         }
-        
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px 20px 12px; /* Reduced top padding */
+
+        .infographic-service-wrapper:hover .infographic-service-image::before {
+            opacity: 1;
         }
-        
-        /* Quick links section */
-        .quick-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px 12px;
-            margin-bottom: 12px; /* Reduced bottom margin */
+
+        /* Alternating layout */
+        .infographic-service-wrapper:nth-child(even) .infographic-service-content {
+            order: 2;
         }
-        
-        .quick-link {
-            text-decoration: none;
-            font-size: 13px;
-            padding: 5px 14px;
-            border-radius: 50px;
-            color: #4f46e5;
-            background-color: #f5f7ff;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            font-weight: 500;
+
+        .infographic-service-wrapper:nth-child(even) .infographic-service-image-wrapper {
+            order: 1;
         }
-        
-        .quick-link:hover {
-            background-color: #4f46e5;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+
+        .infographic-service-wrapper:nth-child(even) .infographic-service-number {
+            right: 20px;
+            left: auto;
         }
-        
-        .quick-link i {
-            margin-right: 6px;
-            font-size: 12px;
+
+        /* Connector lines */
+        .infographic-connector {
+            position: absolute;
+            width: 300px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #667eea 50%, transparent 100%);
+            top: 50%;
+            z-index: 0;
         }
-        
-        /* Footer bottom section */
 
-        .footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 12px;
-  position: relative;
-}
+        .infographic-service-wrapper:nth-child(odd) .infographic-connector {
+            right: -150px;
+            transform: translateY(-50%) rotate(-15deg);
+        }
 
-.footer-bottom::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 96%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(230, 232, 240, 0.8), transparent);
-}
+        .infographic-service-wrapper:nth-child(even) .infographic-connector {
+            left: -150px;
+            transform: translateY(-50%) rotate(15deg);
+        }
 
-.footer-left {
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
+        .infographic-service-wrapper:last-child .infographic-connector {
+            display: none;
+        }
 
-.footer-logo {
-  height: 32px;
-  object-fit: contain;
-}
-
-.footer-center {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.footer-right {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-}
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 12px;
+        /* Highlights Section */
+        .infographic-highlights {
+            margin-top: 100px;
+            background: #1a202c;
+            border-radius: 30px;
+            padding: 60px;
             position: relative;
+            overflow: hidden;
         }
-        
-        .footer-bottom::before {
+
+        .infographic-highlights::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 96%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(230, 232, 240, 0.8), transparent);
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(102,126,234,0.1) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
         }
-        
-        /* Copyright styling */
-        .copyright {
-            color: #888;
-            font-size: 12px;
-            display: flex;
-            align-items: center;
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-20px) translateX(20px); }
+            50% { transform: translateY(20px) translateX(-20px); }
+            75% { transform: translateY(-10px) translateX(-10px); }
         }
-        
-        .copyright span {
-            margin-left: 5px;
+
+        .infographic-highlight-row {
+            position: relative;
+            z-index: 2;
         }
-        
-        /* Social links */
-        .social-terms {
+
+        .infographic-highlight-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 40px;
+            height: 100%;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .infographic-highlight-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .infographic-highlight-text {
+            color: #cbd5e0;
+            line-height: 1.8;
+        }
+
+        .infographic-difference-items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .infographic-difference-item {
             display: flex;
             align-items: center;
             gap: 15px;
         }
-        
-        .social-links {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .social-link {
+
+        .infographic-difference-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            color: #6366f1;
-            background-color: #f5f7ff;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-        
-        .social-link:hover {
-            background-color: #6366f1;
             color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(99, 102, 241, 0.25);
+            font-size: 20px;
+        }
+
+        .infographic-difference-label {
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 991px) {
+            .infographic-service-wrapper:nth-child(even) .infographic-service-content,
+            .infographic-service-wrapper:nth-child(even) .infographic-service-image-wrapper {
+                order: unset;
+            }
+
+            .infographic-service-content {
+                padding: 30px 15px;
+            }
+
+            .infographic-service-image {
+                height: 400px;
+                margin-bottom: 30px;
+            }
+
+            .infographic-connector {
+                display: none;
+            }
+
+            .infographic-service-number {
+                font-size: 100px;
+                top: -20px;
+            }
+
+            .infographic-service-name {
+                font-size: 28px;
+            }
+
+            .infographic-highlights {
+                padding: 40px 20px;
+            }
+
+            .infographic-difference-items {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .datum-industries-wrapper {
+            /* background: linear-gradient(135deg, #f3f4f6 0%, #ffffff 100%); */
+            /* padding: 80px 0; */
+            position: relative;
+            overflow: hidden;
+            background-image: url(https://cdn.prod.website-files.com/66d82a466946e70d8ff3ef01/66d9709eea6a57465e54029d_Background%20Banner%20Image.png);
+        }
+
+        /* Optional decorative background element */
+        .datum-industries-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 60%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+
+        .datum-industries-section {
+            position: relative;
+            z-index: 1;
         }
         
-        /* Terms links */
-        .terms-links {
-            display: flex;
-            gap: 12px;
-        }
-        
-        .terms-link {
-            color: #888;
-            text-decoration: none;
-            font-size: 12px;
-            transition: all 0.3s ease;
+        .datum-industries-header {
+            text-align: center;
+            margin-bottom: 60px;
             position: relative;
         }
         
-        .terms-link:hover {
-            color: #6366f1;
+        .datum-industries-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: #1a202c;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
         }
-        
-        .terms-link::after {
+
+        /* Underline decoration similar to services section */
+        .datum-industries-title::after {
             content: '';
             position: absolute;
-            bottom: -2px;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        .datum-industries-description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+        
+        .datum-industries-carousel {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .datum-industry-card {
+            width: calc(20% - 24px);
+            min-width: 240px;
+            height: 320px;
+            background: white;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.5s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .datum-industry-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(102, 126, 234, 0.6);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+        }
+        
+        .datum-industry-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
             left: 0;
-            width: 0;
-            height: 1px;
-            background-color: #6366f1;
-            transition: width 0.3s ease;
-        }
-        
-        .terms-link:hover::after {
             width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 40%, rgba(26, 32, 44, 0.95));
+            z-index: 1;
+            transition: all 0.5s ease;
+        }
+
+        .datum-industry-card:hover::before {
+            background: linear-gradient(to bottom, transparent 30%, rgba(26, 32, 44, 0.98));
         }
         
-        /* Media queries for responsiveness */
-        @media (max-width: 768px) {
-            .footer-bottom {
+        .datum-industry-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            transition: all 0.5s ease;
+        }
+        
+        .datum-industry-card:hover .datum-industry-image {
+            transform: scale(1.05);
+        }
+        
+        .datum-industry-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px;
+            z-index: 2;
+        }
+        
+        .datum-industry-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
 
-    
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
+        .datum-industry-card:hover .datum-industry-icon {
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        .datum-industry-icon i {
+            font-size: 24px;
+            color: white;
+        }
+        
+        .datum-industry-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .datum-industry-description {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 1440px) {
+            .datum-industries-title {
+                font-size: 42px;
             }
             
-            .social-terms {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .quick-link {
-                font-size: 12px;
-                padding: 4px 12px;
-            }
-            
-            .footer-container {
-                padding: 12px 15px 10px; /* Even more reduced padding on mobile */
+            .datum-industry-card {
+                width: calc(33.333% - 20px);
+                min-width: 280px;
             }
         }
+        
+        @media (max-width: 1200px) {
+            .datum-industry-card {
+                width: calc(33.333% - 20px);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .datum-industries-title {
+                font-size: 36px;
+            }
+            
+            .datum-industry-card {
+                width: calc(50% - 15px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .datum-industries-title {
+                font-size: 32px;
+            }
+
+            .datum-industries-wrapper {
+                padding: 60px 0;
+            }
+            
+            .datum-industry-card {
+                width: 100%;
+                max-width: 400px;
+                height: 280px;
+            }
+
+            .datum-industries-carousel {
+                padding: 0 15px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .datum-industries-title {
+                font-size: 28px;
+            }
+
+            .datum-industries-description {
+                font-size: 16px;
+                padding: 0 15px;
+            }
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 30px 0;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .footer-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            height: 40px;
+            width: auto;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .footer-contact a {
+            color: #6c757d;
+            text-decoration: none;
+        }
+        
+        .footer-contact a:hover {
+            color: #0d6efd;
+        }
+        
+        .copyright {
+            display: flex;
+            align-items: center;
+            color: #6c757d;
+            font-size: 14px;
+        }
+        
+        .copyright i {
+            margin-right: 5px;
+        }
+        
+        .terms-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .terms-link {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .terms-link:hover {
+            color: #0d6efd;
+        }
+        
+        @media (max-width: 992px) {
+            .footer-bottom > div {
+                width: 50%;
+                margin-bottom: 20px;
+            }
+            
+            .footer-bottom {
+                justify-content: flex-start;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .footer-bottom > div {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            .terms-links {
+                justify-content: center;
+            }
+            
+            .footer-left {
+                display: flex;
+                justify-content: center;
+            }
+        }
+  
 </style>
 </head>
 <body>
@@ -3531,18 +3690,14 @@ border: 2px solid rgb(218, 218, 218) !important;
     </section>
 
     <section class="why-choose-section">
-        <!-- Background elements -->
-        <div class="bg-pattern"></div>
-        <!-- <div class="bg-shapes">
-            <div class="bg-shape bg-shape-1"></div>
-            <div class="bg-shape bg-shape-2"></div>
-        </div> -->
+       
+       
         
         <div class="container-unique">
             <!-- Section header -->
             <div class="section-header animate-fade-in-up">
-                <h2 class="section-title">Why Choose Datum AI?</h2>
-                <p class="section-subtitle">We're proud of the trust we've earned from global businesses and the remarkable results we've delivered. Here's a snapshot of our achievements:</p>
+                <h2 class="section-title">Founded by Machine Learning Engineers for Machine Learning Engineers</h2>
+               
             </div>
             
             <!-- Stats cards -->
@@ -3588,8 +3743,8 @@ border: 2px solid rgb(218, 218, 218) !important;
                 <div class="founders-list">
                     <div class="founder-item">
                         <img src="assets/courant_short_color.png" alt="NYU Courant Logo" class="school-logo">
-                        <h4 class="school-name">NYU Courant</h4>
-                        <p class="school-type">Institute of Mathematical Sciences</p>
+                        <!-- <h4 class="school-name">NYU Courant</h4>
+                        <p class="school-type">Institute of Mathematical Sciences</p> -->
                     </div>
                     
                     <!-- <div class="founder-item">
@@ -3602,211 +3757,205 @@ border: 2px solid rgb(218, 218, 218) !important;
         </div>
     </section>
 
-    <section class="" style=" background: var(--dark-bg);">
-        <!-- Background elements -->
-        <!-- <div class="datum-bg-elements">
-            <div class="datum-waves"></div>
-            <div class="datum-grid-lines"></div>
-            <div class="datum-floating-particles">
-                <div class="datum-particle"></div>
-                <div class="datum-particle"></div>
-                <div class="datum-particle"></div>
-                <div class="datum-particle"></div>
-                <div class="datum-particle"></div>
-                <div class="datum-particle"></div>
-                <div class="datum-particle"></div>
-                <div class="datum-particle"></div>
-            </div>
-        </div>
-         -->
+    <section class="infographic-services-section">
         <div class="container">
-            <!-- Section header -->
-            <div class="datum-section-header">
-                <!-- <div class="datum-section-badge">Our Expertise</div> -->
-                <h2 class="datum-section-title">Our Services</h2>
-                <p class="datum-section-description">We provide specialized data annotation, custom data sourcing and RLHF(Reinforcement Learning with Human Feedback) for LLMs to help your ML models reach their full potential with high-quality, accurately labeled data.
-                </p>
+            <!-- Header -->
+            <div class="section-header animate-fade-in-up">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">We provide specialized data annotation, custom data sourcing and RLHF(Reinforcement Learning with Human Feedback) 
+                    for LLMs to help your ML models reach their full potential with high-quality, accurately labeled data.</p>
             </div>
             
-            <!-- Services Split Layout -->
-            <div class="datum-services-split-layout">
-                <!-- Service 1 -->
-                <div class="datum-service-row">
-                    <div class="datum-service-content">
-                        <div class="datum-service-card">
-                            <div class="datum-service-icon">
+
+            <!-- Service 1 -->
+            <div class="infographic-service-wrapper">
+                <div class="row infographic-service-row">
+                    <div class="col-lg-6 infographic-service-content">
+                        <span class="infographic-service-number">01</span>
+                        <div class="infographic-service-card">
+                            <div class="infographic-service-icon">
                                 <i class="fas fa-tags"></i>
                             </div>
-                            <h3 class="datum-service-title">Data Annotation & Labeling</h3>
-                            <p class="datum-service-tag">"Get accurate and consistent labeled data for your AI models."</p>
-                            <p class="datum-service-description">We provide expert data annotation services across various industries and data modalities ensuring accurate labeling of images, text, audio, and more for training and evaluating machine learning models.
+                            <h3 class="infographic-service-name">Data Annotation & Labeling</h3>
+                            <p class="infographic-service-tagline">"Get accurate and consistent labeled data for your AI models."</p>
+                            <p class="infographic-service-desc">
+                                We provide expert data annotation services across various industries and data modalities 
+                                ensuring accurate labeling of images, text, audio, and more for training and evaluating 
+                                machine learning models.
                             </p>
-                            <div class="datum-service-features">
-                                <div class="datum-feature-tag">
+                            <div class="infographic-features">
+                                <span class="infographic-feature-pill">
                                     <i class="fas fa-check"></i>
-                                    <span>Image/Video</span>
-                                </div>
-                                <div class="datum-feature-tag">
+                                    Image/Video
+                                </span>
+                                <span class="infographic-feature-pill">
                                     <i class="fas fa-check"></i>
-                                    <span>Audio & Speech</span>
-                                </div>
-                                <div class="datum-feature-tag">
+                                    Audio & Speech
+                                </span>
+                                <span class="infographic-feature-pill">
                                     <i class="fas fa-check"></i>
-                                    <span>Medical/Legal Data Annotation</span>
-                                </div>
-                                <div class="datum-feature-tag">
+                                    Medical/Legal Data Annotation
+                                </span>
+                                <span class="infographic-feature-pill">
                                     <i class="fas fa-check"></i>
-                                    <span>3D & Multi-modal Labeling</span>
-                                </div>
+                                    3D & Multi-modal Labeling
+                                </span>
                             </div>
                         </div>
                     </div>
-                    <div class="datum-service-image">
-                        <img src="assets/1-copy.jpg" alt="Data Annotation & Labeling">
+                    <div class="col-lg-6 infographic-service-image-wrapper">
+                        <div class="infographic-service-image">
+                            <img src="assets/1-copy.jpg" alt="Data Annotation & Labeling">
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Service 2 -->
-                <div class="datum-service-row">
-                    <div class="datum-service-content">
-                        <div class="datum-service-card">
-                            <div class="datum-service-icon">
+                <div class="infographic-connector"></div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="infographic-service-wrapper">
+                <div class="row infographic-service-row">
+                    <div class="col-lg-6 infographic-service-content">
+                        <span class="infographic-service-number">02</span>
+                        <div class="infographic-service-card">
+                            <div class="infographic-service-icon">
                                 <i class="fas fa-database"></i>
                             </div>
-                            <h3 class="datum-service-title">Custom Data Sourcing</h3>
-                            <p class="datum-service-tag">"Need data? We source it globally, with the expertise to match."</p>
-                            <p class="datum-service-description">Our global network of collectors enables us to source and curate high-quality, specialized datasets for domains from healthcare and retail, to Autonomous Driving and Multilingual LLMs.
+                            <h3 class="infographic-service-name">Custom Data Sourcing</h3>
+                            <p class="infographic-service-tagline">"Need data? We source it globally, with the expertise to match."</p>
+                            <p class="infographic-service-desc">
+                                Our global network of collectors enables us to source and curate high-quality, 
+                                specialized datasets for domains from healthcare and retail, to Autonomous Driving 
+                                and Multilingual LLMs.
                             </p>
-                            <div class="datum-service-features">
-                                <div class="datum-feature-tag">
+                            <div class="infographic-features">
+                                <span class="infographic-feature-pill">
                                     <i class="fas fa-check"></i>
-                                    <span>Images/Videos (Person, Object)</span>
-                                </div>
-                                <div class="datum-feature-tag">
+                                    Images/Videos (Person, Object)
+                                </span>
+                                <span class="infographic-feature-pill">
                                     <i class="fas fa-check"></i>
-                                    <span>Audio (Scripted Monologues, Conversation Data, etc)</span>
-                                </div>
-                                <div class="datum-feature-tag">
+                                    Audio (Scripted Monologues, Conversation Data, etc)
+                                </span>
+                                <span class="infographic-feature-pill">
                                     <i class="fas fa-check"></i>
-                                    <span>Document Sourcing (Government Briefs, Invoices, Bank Statements)</span>
-                                </div>
-                                <div class="datum-feature-tag">
+                                    Document Sourcing
+                                </span>
+                                <span class="infographic-feature-pill">
                                     <i class="fas fa-check"></i>
-                                    <span>Medical Data Sourcing(CTs/MRIs/X-Rays, Reports etc)</span>
-                                </div>
+                                    Medical Data Sourcing
+                                </span>
                             </div>
                         </div>
                     </div>
-                    <div class="datum-service-image">
-                        <img src="assets/DATA SOURCING.jpg" alt="Data Sourcing">
+                    <div class="col-lg-6 infographic-service-image-wrapper">
+                        <div class="infographic-service-image">
+                            <img src="assets/3.png" alt="Data Sourcing">
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Service 3 -->
-                <div class="datum-service-row">
-                    <div class="datum-service-content">
-                        <div class="datum-service-card">
-                            <div class="datum-service-icon">
+                <div class="infographic-connector"></div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="infographic-service-wrapper">
+                <div class="row infographic-service-row">
+                    <div class="col-lg-6 infographic-service-content">
+                        <span class="infographic-service-number">03</span>
+                        <div class="infographic-service-card">
+                            <div class="infographic-service-icon">
                                 <i class="fas fa-robot"></i>
                             </div>
-                            <h3 class="datum-service-title">Generative AI - RLHF and Red Teaming</h3>
-                            <p class="datum-service-tag">"Supercharge your generative AI with RLHF to improve LLM accuracy."</p>
-                            <p class="datum-service-description">We have with us Domain Experts from several fields, from Radiologists and Finance Professionals to STEM and Software Engineering talent and Red-Teamers to assist our clients with fine-tuning their LLMs.
+                            <h3 class="infographic-service-name">Generative AI - RLHF and Red Teaming</h3>
+                            <p class="infographic-service-tagline">"Supercharge your generative AI with RLHF to improve LLM accuracy."</p>
+                            <p class="infographic-service-desc">
+                                We have with us Domain Experts from several fields, from Radiologists and Finance 
+                                Professionals to STEM and Software Engineering talent and Red-Teamers to assist 
+                                our clients with fine-tuning their LLMs.
                             </p>
-                            <div class="datum-service-features">
-                                <div class="datum-feature-tag">
+                            <div class="infographic-features">
+                                <span class="infographic-feature-pill">
                                     <i class="fas fa-check"></i>
-                                    <span>RLHF(Reinforcement Learning with Human Feedback)</span>
-                                </div>
-                                <div class="datum-feature-tag">
+                                    RLHF(Reinforcement Learning with Human Feedback)
+                                </span>
+                                <span class="infographic-feature-pill">
                                     <i class="fas fa-check"></i>
-                                    <span>SFT (Supervised Fine-Tuning)</span>
-                                </div>
-                                <div class="datum-feature-tag">
+                                    SFT (Supervised Fine-Tuning)
+                                </span>
+                                <span class="infographic-feature-pill">
                                     <i class="fas fa-check"></i>
-                                    <span>Red Teaming</span>
-                                </div>
+                                    Red Teaming
+                                </span>
                             </div>
                         </div>
                     </div>
-                    <div class="datum-service-image">
-                        <img src="assets/2.jpg" alt="Generative AI & RLHF">
+                    <div class="col-lg-6 infographic-service-image-wrapper">
+                        <div class="infographic-service-image">
+                            <img src="assets/2-ff.png" alt="Generative AI & RLHF">
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Service 4 -->
-                <!-- <div class="datum-service-row">
-                    <div class="datum-service-content">
-                        <div class="datum-service-card">
-                            <div class="datum-service-icon">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <h3 class="datum-service-title">Global Data Collection</h3>
-                            <p class="datum-service-tag">"We collect diverse data from all over the world, ensuring your AI is ready for global use."</p>
-                            <p class="datum-service-description">Our global sourcing network delivers diverse, high-quality datasets for any AI project, from self-driving cars to multilingual models, ensuring broad scenario representation.</p>
-                            <div class="datum-service-features">
-                                <div class="datum-feature-tag">
-                                    <i class="fas fa-check"></i>
-                                    <span>Multilingual Data</span>
-                                </div>
-                                <div class="datum-feature-tag">
-                                    <i class="fas fa-check"></i>
-                                    <span>Cultural Context</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="datum-service-image">
-                        <img src="/api/placeholder/640/420" alt="Global Data Collection">
-                    </div>
-                </div> -->
             </div>
-            
-            <!-- Why Data Quality Matters and Datum AI Difference -->
-            <div class="datum-highlights-section">
-                <div class="datum-highlight-card">
-                    <h3 class="datum-highlight-title">Why Data Quality Matters</h3>
-                    <p class="datum-highlight-description">With Machine Learning models, data quality could mean the difference between a poorly performing model and a strong robust model. Poorly labeled, insufficient, or biased data can result in inaccurate models that fail in real-world applications. With Datum AI, you don't just get data—you get the right data, labeled accurately and prepared to drive your AI models to success.
 
-                </div>
-                
-                <div class="datum-highlight-card">
-                    <h3 class="datum-highlight-title">The Datum AI Difference</h3>
-                    <div class="datum-difference-grid">
-                        <div class="datum-difference-item">
-                            <div class="datum-difference-icon">
-                                <i class="fas fa-certificate"></i>
-                            </div>
-                            <span class="datum-difference-text">High-Quality Data</span>
+            <!-- Highlights Section -->
+            <div class="infographic-highlights">
+                <div class="row infographic-highlight-row">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <div class="infographic-highlight-card">
+                            <h3 class="infographic-highlight-title">Why Data Quality Matters</h3>
+                            <p class="infographic-highlight-text">
+                                With Machine Learning models, data quality could mean the difference between 
+                                a poorly performing model and a strong robust model. Poorly labeled, insufficient, 
+                                or biased data can result in inaccurate models that fail in real-world applications. 
+                                With Datum AI, you don't just get data—you get the right data, labeled accurately 
+                                and prepared to drive your AI models to success.
+                            </p>
                         </div>
-                        <div class="datum-difference-item">
-                            <div class="datum-difference-icon">
-                                <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="infographic-highlight-card">
+                            <h3 class="infographic-highlight-title">The Datum AI Difference</h3>
+                            <div class="infographic-difference-items">
+                                <div class="infographic-difference-item">
+                                    <div class="infographic-difference-icon">
+                                        <i class="fas fa-certificate"></i>
+                                    </div>
+                                    <span class="infographic-difference-label">High-Quality Data</span>
+                                </div>
+                                <div class="infographic-difference-item">
+                                    <div class="infographic-difference-icon">
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </div>
+                                    <span class="infographic-difference-label">Affordable Pricing</span>
+                                </div>
+                                <div class="infographic-difference-item">
+                                    <div class="infographic-difference-icon">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <span class="infographic-difference-label">Quick Turnaround</span>
+                                </div>
+                                <div class="infographic-difference-item">
+                                    <div class="infographic-difference-icon">
+                                        <i class="fas fa-expand-arrows-alt"></i>
+                                    </div>
+                                    <span class="infographic-difference-label">Scalability</span>
+                                </div>
                             </div>
-                            <span class="datum-difference-text">Affordable Pricing</span>
-                        </div>
-                        <div class="datum-difference-item">
-                            <div class="datum-difference-icon">
-                                <i class="fas fa-bolt"></i>
-                            </div>
-                            <span class="datum-difference-text">Quick Turnaround</span>
-                        </div>
-                        <div class="datum-difference-item">
-                            <div class="datum-difference-icon">
-                                <i class="fas fa-expand-arrows-alt"></i>
-                            </div>
-                            <span class="datum-difference-text">Scalability</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Industries section -->
+        </div>
+    </section>
+
+  
+    <section class="datum-industries-wrapper">
+        <div class="container">
+            <div class="section-header animate-fade-in-up">
+                <h2 class="section-title">Industries We Serve</h2>
+                <p class="section-subtitle">Datum AI serves a variety of industries, providing specialized data annotation and sourcing services tailored to their unique needs</p>
+            </div>
             <div class="datum-industries-section">
-                <div class="datum-industries-header">
-                    <h3 class="datum-industries-title">Industries We Serve</h3>
-                    <p class="datum-industries-description text-white">Datum AI serves a variety of industries, providing specialized data annotation and sourcing services tailored to their unique needs</p>
-                </div>
                 
                 <div class="datum-industries-carousel">
                     <div class="datum-industry-card">
@@ -3816,7 +3965,7 @@ border: 2px solid rgb(218, 218, 218) !important;
                                 <i class="fas fa-hospital"></i>
                             </div>
                             <h4 class="datum-industry-name">Healthcare</h4>
-                            <!-- <p class="datum-industry-description">Specialized data for medical imaging, diagnostics, and patient care applications.</p> -->
+                            
                         </div>
                     </div>
                     
@@ -3827,7 +3976,7 @@ border: 2px solid rgb(218, 218, 218) !important;
                                 <i class="fas fa-shopping-cart"></i>
                             </div>
                             <h4 class="datum-industry-name">Retail</h4>
-                            <!-- <p class="datum-industry-description">Product categorization and customer behavior analysis for smarter shopping experiences.</p> -->
+                           
                         </div>
                     </div>
                     
@@ -3838,7 +3987,7 @@ border: 2px solid rgb(218, 218, 218) !important;
                                 <i class="fas fa-car"></i>
                             </div>
                             <h4 class="datum-industry-name">Autonomous Vehicles</h4>
-                            <!-- <p class="datum-industry-description">Scene understanding and object detection for safe self-driving technology.</p> -->
+                            
                         </div>
                     </div>
                     
@@ -3846,40 +3995,49 @@ border: 2px solid rgb(218, 218, 218) !important;
                         <img src="assets/generative ai.jpg" alt="Generative AI" class="datum-industry-image">
                         <div class="datum-industry-content">
                             <div class="datum-industry-icon">
-                                <i class="fas fa-robot"></i>
+                                <i class="fas fa-brain"></i>
                             </div>
                             <h4 class="datum-industry-name">Generative AI</h4>
-                            <!-- <p class="datum-industry-description">Human feedback data for improving language models and creative AI systems.</p> -->
-                        </div>
-                    </div>
-                    <!-- <div class="datum-industry-card">
-                        <img src="assets/" alt="Generative AI" class="datum-industry-image">
-                        <div class="datum-industry-content">
-                            <div class="datum-industry-icon">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <h4 class="datum-industry-name"> Logistics</h4>
                             
                         </div>
-                    </div> -->
+                    </div>
                     
                     <div class="datum-industry-card">
-                        <img src="assets/ar vr technology.jpg" alt="AR/VR & Robotics" class="datum-industry-image">
+                        <img src="assets/logistics.jpg" alt="Logistics" class="datum-industry-image">
+                        <div class="datum-industry-content">
+                            <div class="datum-industry-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h4 class="datum-industry-name">Logistics</h4>
+                           
+                        </div>
+                    </div>
+                    
+                    <div class="datum-industry-card">
+                        <img src="assets/ar vr technology.jpg" alt="AR/VR Technology" class="datum-industry-image">
                         <div class="datum-industry-content">
                             <div class="datum-industry-icon">
                                 <i class="fas fa-vr-cardboard"></i>
                             </div>
-                            <h4 class="datum-industry-name">AR/VR & Robotics</h4>
-                            <!-- <p class="datum-industry-description">Spatial and interactive data for immersive experiences and robotic systems.</p> -->
+                            <h4 class="datum-industry-name">AR/VR Technology</h4>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="datum-industry-card">
+                        <img src="assets/robotics.jpg" alt="Robotics" class="datum-industry-image">
+                        <div class="datum-industry-content">
+                            <div class="datum-industry-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h4 class="datum-industry-name">Robotics</h4>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-  
 
     <section class="get-started">
         <!-- Background elements -->
@@ -3993,83 +4151,37 @@ border: 2px solid rgb(218, 218, 218) !important;
     </div>
       </section>
 
-      <!-- footer -->
-      <!-- Streamlined footer with no extra spacing -->
-    <footer class="footer">
-        <div class="footer-container">
-            <!-- Navigation links -->
-            <!-- <div class="quick-links">
-                <a href="#" class="quick-link">
-                    <i class="fas fa-building"></i> Industries
-                </a>
-                <a href="#" class="quick-link">
-                    <i class="fas fa-cogs"></i> Services
-                </a>
-                <a href="#" class="quick-link">
-                    <i class="fas fa-tags"></i> Data Annotation
-                </a>
-                <a href="#" class="quick-link">
-                    <i class="fas fa-database"></i> Data Sourcing
-                </a>
-                <a href="#" class="quick-link">
-                    <i class="fas fa-robot"></i> Generative AI/RLHF
-                </a>
-                <a href="#" class="quick-link">
-                    <i class="fas fa-brain"></i> AI Consulting
-                </a>
-                <a href="#" class="quick-link">
-                    <i class="fas fa-info-circle"></i> About
-                </a>
-                <a href="#" class="quick-link">
-                    <i class="fas fa-envelope"></i> Contact
-                </a>
-                <a href="#" class="quick-link">
-                    <i class="fas fa-rss"></i> Blogs
-                </a>
-                <a href="#" class="quick-link">
-                    <i class="fas fa-file-alt"></i> Resources
-                </a>
-            </div> -->
-            
-            <!-- Footer bottom section -->
+
+      <footer class="footer">
+        <div class="container p-0">
             <div class="footer-bottom">
                 <div class="footer-left">
-                  <!-- <img src="your-logo.png" alt="Logo" class="footer-logo" /> -->
-                  <img src="assets/67528c2628e06a7d4c10876c_Datum New Logo (1).svg" alt="Datum AI Logo" class="logo">
+                    <img src="assets/67528c2628e06a7d4c10876c_Datum New Logo (1).svg" alt="Datum AI Logo" class="footer-logo">
                 </div>
-              
+                
+                <div class="footer-contact">
+                    <p>US: +1 417-739-0215</p>
+                    <p>India: +91-96507-27903</p>
+                    <p>Email: <a href="mailto:contact@datum-ai.com">contact@datum-ai.com</a></p>
+                </div>
+                
                 <div class="footer-center">
-                  <div class="copyright">
-                    <i class="far fa-copyright"></i>
-                    <span>2025 All Rights Reserved</span>
-                  </div>
+                    <div class="copyright">
+                        <i class="far fa-copyright"></i>
+                        <span>2025 All Rights Reserved</span>
+                    </div>
                 </div>
-              
+                
                 <div class="footer-right social-terms">
-                  <!-- <div class="social-links">
-                    <a href="#" class="social-link" aria-label="LinkedIn">
-                      <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" class="social-link" aria-label="Twitter">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="social-link" aria-label="Facebook">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="social-link" aria-label="Instagram">
-                      <i class="fab fa-instagram"></i>
-                    </a>
-                  </div> -->
-              
-                  <div class="terms-links">
-                    <a href="#" class="terms-link">Terms of Service</a>
-                    <a href="#" class="terms-link">Privacy Policy</a>
-                  </div>
+                    <div class="terms-links">
+                        <a href="#" class="terms-link">Terms of Service</a>
+                        <a href="#" class="terms-link">Privacy Policy</a>
+                    </div>
                 </div>
-              </div>
-              
+            </div>
         </div>
     </footer>
+
       
     
 
