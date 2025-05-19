@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
         
@@ -19,6 +20,8 @@
             --light-gray1: #f7f7f7;
             --gray: #7a8599;
             --dark-bg: #2f386e;
+            --datum-purple: #6f42c1;
+            --datum-light-purple: #8a5cd6;
         }
         
         * {
@@ -78,7 +81,7 @@
         .hero-section {
             min-height: 100vh;
             display: flex;
-            padding-top: 80px;
+            /* padding-top: 80px; */
             position: relative;
             overflow: hidden;
             background-image: url(https://cdn.prod.website-files.com/66d82a466946e70d8ff3ef01/66d9709eea6a57465e54029d_Background%20Banner%20Image.png);
@@ -132,8 +135,8 @@
         }
         
         .hero-headline {
-            font-size: 3.5rem;
-            font-weight: 800;
+            font-size: 3.0rem;
+            font-weight: 500;
             color: var(--navy-blue);
             line-height: 1.2;
             position: relative;
@@ -3504,6 +3507,7 @@ border: 2px solid rgb(218, 218, 218) !important;
             align-items: center;
             color: #6c757d;
             font-size: 14px;
+            justify-content: center;
         }
         
         .copyright i {
@@ -3552,15 +3556,146 @@ border: 2px solid rgb(218, 218, 218) !important;
                 justify-content: center;
             }
         }
-  
+        .datum-header {
+            background-color: #fafafc;
+            padding: 12px 30px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .datum-logo-wrap {
+            display: flex;
+            align-items: center;
+        }
+        
+        .datum-logo {
+            height: 35px;
+        }
+        
+        .datum-contact-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .datum-contact-item {
+            color: var(--datum-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            letter-spacing: 0.2px;
+            margin-bottom: 5px;
+        }
+        
+        .datum-contact-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .datum-contact-item:hover {
+            color: var(--datum-purple);
+        }
+        
+        .datum-contact-item i {
+            margin-right: 6px;
+            font-size: 16px;
+            color: var(--datum-purple);
+        }
+        
+        .datum-btn {
+            background-color: var(--datum-purple);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            white-space: nowrap;
+            letter-spacing: 0.3px;
+        }
+        
+        .datum-btn:hover {
+            background-color: var(--datum-light-purple);
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(111, 66, 193, 0.2);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .datum-header {
+                padding: 10px 20px;
+            }
+            
+            .datum-contact-item {
+                font-size: 14px;
+            }
+            
+            .datum-btn {
+                padding: 7px 16px;
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .datum-header {
+                flex-wrap: wrap;
+                padding: 12px 15px;
+            }
+            
+            .datum-logo-wrap {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            .datum-contact-group {
+                flex-grow: 1;
+                margin-right: 10px;
+            }
+            
+            .datum-contact-item {
+                font-size: 13px;
+            }
+            
+            .datum-btn {
+                padding: 6px 14px;
+                font-size: 13px;
+            }
+        }
 </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <img src="assets/67528c2628e06a7d4c10876c_Datum New Logo (1).svg" alt="Datum AI Logo" class="logo">
-        <a href="#contact" class="appointment-btn">Book Appointment</a>
-    </nav>
+    <header class="datum-header">
+        <!-- Logo (left) -->
+        <div class="datum-logo-wrap">
+            <a href="#">
+                <img src="assets/67528c2628e06a7d4c10876c_Datum New Logo (1).svg" alt="Datum AI Logo" class="datum-logo">
+            </a>
+        </div>
+        
+        <!-- Contact Info (middle/right) -->
+        <div class="datum-contact-group">
+            <!-- Phone number -->
+            <a href="tel:+1 417-739-0215" class="datum-contact-item">
+                <i class="bi bi-telephone-fill"></i>+1 417-739-0215
+            </a>
+            
+            <!-- Email -->
+            <a href="mailto:contact@datum-ai.com" class="datum-contact-item">
+                <i class="bi bi-envelope-fill"></i> contact@datum-ai.com
+            </a>
+        </div>
+        
+        <!-- Book Appointment button (far right) -->
+        <a href="#contact" class="datum-btn">Book Appointment</a>
+    </header>
     
     <!-- Hero Section -->
     <section class="hero-section">
@@ -3584,7 +3719,7 @@ border: 2px solid rgb(218, 218, 218) !important;
                     <i class="fas fa-robot"></i>
                     <span>ALL YOUR AI DATA NEEDS COVERED</span>
                 </div>
-                <h1 class="hero-headline">Juice Up Your AI  <span class="text-gradient">with the</span>  Best Data</h1>
+                <h1 class="hero-headline">Reduce Your Data Annotation <span class="text-gradient">and Data Sourcing </span> costs by up to 50%!</h1>
                 <p class="hero-subheadline">High-Quality Data Labeling, Data Collection and RLHF By the Best Trained Experts. Fast, Scalable, Affordable, Accurate.</p>
             </div>
             
@@ -3603,11 +3738,11 @@ border: 2px solid rgb(218, 218, 218) !important;
                 
                 <div class="feature-item">
                     <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-shield-alt"></i>
                     </div>
                     <div class="feature-text">
-                        <h3 class="feature-title">Accuracy & Quality </h3>
-                        <p class="feature-description"> Both Manual and Automated to ensure accurate labeled data for you.
+                        <h3 class="feature-title">Data Privacy and Security</h3>
+                        <p class="feature-description">Enterprise Grade Encryption and  Protocols, GDPR and HIPAA Compliant
                         </p>
                     </div>
                 </div>
@@ -3623,13 +3758,14 @@ border: 2px solid rgb(218, 218, 218) !important;
                     </div>
                 </div>
                 
+                
                 <div class="feature-item">
                     <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="feature-text">
-                        <h3 class="feature-title">Data Privacy and Security</h3>
-                        <p class="feature-description">Enterprise Grade Encryption and  Protocols, GDPR and HIPAA Compliant
+                        <h3 class="feature-title">Multiple Level Of validation</h3>
+                        <p class="feature-description"> Both Manual and Automated to ensure accurate labeled data for you.
                         </p>
                     </div>
                 </div>
@@ -3662,7 +3798,7 @@ border: 2px solid rgb(218, 218, 218) !important;
                     <div class="form-group">
                         <label for="phone" class="form-label">Phone Number</label>
                         <div class="phone-input-container">
-                            <select class="country-code-select">
+                            <!-- <select class="country-code-select">
                                 <option value="+1">+1 (US)</option>
                                 <option value="+44">+44 (UK)</option>
                                 <option value="+91" selected>+91 (IN)</option>
@@ -3671,7 +3807,8 @@ border: 2px solid rgb(218, 218, 218) !important;
                                 <option value="+33">+33 (FR)</option>
                                 <option value="+81">+81 (JP)</option>
                                 <option value="+86">+86 (CN)</option>
-                            </select>
+                            </select> -->
+                            <input type="number" id="country-code" class="country-code-select" placeholder="zip-code" required>
                             <input type="tel" id="phone" class="form-control phone-input" placeholder="Enter your phone number" required>
                         </div>
                     </div>
@@ -3696,8 +3833,8 @@ border: 2px solid rgb(218, 218, 218) !important;
         <div class="container-unique">
             <!-- Section header -->
             <div class="section-header animate-fade-in-up">
-                <h2 class="section-title">Founded by Machine Learning Engineers for Machine Learning Engineers</h2>
-               
+                <h2 class="founders-title " style="font-size: 28px;">Founded by Machine Learning Engineers</h2>
+                <p class="section-subtitle">For Machine Learning Engineers</p>
             </div>
             
             <!-- Stats cards -->
@@ -3739,6 +3876,7 @@ border: 2px solid rgb(218, 218, 218) !important;
             <div class="founders-section animate-fade-in-up delay-400">
                 <div class="founders-pattern"></div>
                 <h3 class="founders-title">Founded by Alumni from</h3>
+                
                 
                 <div class="founders-list">
                     <div class="founder-item">
@@ -4041,10 +4179,7 @@ border: 2px solid rgb(218, 218, 218) !important;
 
     <section class="get-started">
         <!-- Background elements -->
-        <div class="bg-elements">
-            <div class="bg-circle-1"></div>
-            <div class="bg-circle-2"></div>
-        </div>
+      
 
         <div class="container">
             <div class="get-started-section">
@@ -4088,7 +4223,7 @@ border: 2px solid rgb(218, 218, 218) !important;
                 <!-- CTA Buttons -->
                 <div class="cta-buttons">
                     <a href="#" class="cta-button primary-button">Request a Quote</a>
-                    <a href="#" class="cta-button secondary-button">Schedule a Call</a>
+                    <a href="tel:+91-96507-27903" class="cta-button secondary-button">Schedule a Call</a>
                 </div>
             </div>
         </div>
@@ -4158,29 +4293,38 @@ border: 2px solid rgb(218, 218, 218) !important;
                 <div class="footer-left">
                     <img src="assets/67528c2628e06a7d4c10876c_Datum New Logo (1).svg" alt="Datum AI Logo" class="footer-logo">
                 </div>
-                
-                <div class="footer-contact">
-                    <p>US: +1 417-739-0215</p>
-                    <p>India: +91-96507-27903</p>
-                    <p>Email: <a href="mailto:contact@datum-ai.com">contact@datum-ai.com</a></p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/datumai" target="_blank" class="linkedin-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
                 </div>
-                
+    
+                <div class="footer-contact">
+                    <p><a href="tel:+1 417-739-0215">US: +1 417-739-0215</a></p>
+                    <p><a href="tel:+91-96507-27903">India: +91-96507-27903</a></p>
+                    <p><a href="mailto:contact@datum-ai.com">Email: contact@datum-ai.com</a></p>
+                </div>
+    
                 <div class="footer-center">
                     <div class="copyright">
                         <i class="far fa-copyright"></i>
                         <span>2025 All Rights Reserved</span>
                     </div>
                 </div>
-                
+    
                 <div class="footer-right social-terms">
                     <div class="terms-links">
                         <a href="#" class="terms-link">Terms of Service</a>
                         <a href="#" class="terms-link">Privacy Policy</a>
                     </div>
+    
+                    <!-- LinkedIn Button -->
+                    
                 </div>
             </div>
         </div>
     </footer>
+    
 
       
     
