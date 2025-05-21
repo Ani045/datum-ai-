@@ -3769,47 +3769,38 @@ border: 2px solid rgb(218, 218, 218) !important;
                 
                 
                 <h2 class="form-title">Get Started Today</h2>
-                <form id="contact">
+                <form   action='https://app.formester.com/forms/WrYSW6Lqq/submissions' method='POST'   id="contact1" novalidate>
                     <!-- Name Field -->
                     <div class="form-group">
                         <label for="name" class="form-label">Full Name</label>
-                        <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        <input type="text" id="name" class="form-control" name="name" placeholder="Enter your name" required minlength="2">
                     </div>
-                    
+                
                     <!-- Email Field -->
                     <div class="form-group">
                         <label for="email" class="form-label">Email Address</label>
-                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        <input type="email" id="email" class="form-control"  name="email" placeholder="Enter your email" required>
                     </div>
-                    
+                
                     <!-- Phone Number Field with Country Code -->
                     <div class="form-group">
                         <label for="phone" class="form-label">Phone Number</label>
                         <div class="phone-input-container">
-                            <!-- <select class="country-code-select">
-                                <option value="+1">+1 (US)</option>
-                                <option value="+44">+44 (UK)</option>
-                                <option value="+91" selected>+91 (IN)</option>
-                                <option value="+61">+61 (AU)</option>
-                                <option value="+49">+49 (DE)</option>
-                                <option value="+33">+33 (FR)</option>
-                                <option value="+81">+81 (JP)</option>
-                                <option value="+86">+86 (CN)</option>
-                            </select> -->
-                            <input type="number" id="country-code" class="country-code-select" placeholder="country-code" required>
-                            <input type="tel" id="phone" class="form-control phone-input" placeholder="Enter your phone number" required>
+                            <input type="tel" name="code" id="country-code" class="country-code-select" placeholder="Code" required pattern="^\+?[0-9]{1,4}$" title="Enter a valid country code (e.g. +1, 91)">
+                            <input type="tel" name="phone" id="phone" class="form-control phone-input" placeholder="Enter your phone number" required pattern="[0-9]{6,15}" title="Enter a valid phone number with 6-15 digits">
                         </div>
                     </div>
-                    
+                
                     <!-- Message Field -->
                     <div class="form-group">
                         <label for="message" class="form-label">Message</label>
-                        <textarea id="message" class="form-control message-control" placeholder="Tell us about your project"></textarea>
+                        <textarea id="message" class="form-control message-control" name="message" placeholder="Tell us about your project" required minlength="4"></textarea>
                     </div>
-                    
+                
                     <!-- Submit Button -->
-                    <button type="submit" class="form-button">Submit Request <i class="fas fa-arrow-right"></i></button>
+                    <button type="submit" id="submitBtn" class="form-button">Submit Request</button>
                 </form>
+                
             </div>
         </div>
     </section>
@@ -4510,5 +4501,27 @@ border: 2px solid rgb(218, 218, 218) !important;
             });
         });
     </script>
+
+<script>
+    // Get the form and button element
+    const form = document.getElementById('contact1');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    // Add submit event listener to the form
+    form.addEventListener('submit', function(e) {
+        // Prevent the default form submission
+        e.preventDefault();
+        
+        // Disable the submit button to prevent multiple submissions
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Submitting...';
+        
+        // Submit the form programmatically
+        setTimeout(function() {
+            form.submit();
+        }, 100);
+    });
+</script>
+
 </body>
 </html>
